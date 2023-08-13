@@ -7,8 +7,6 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 import Modal from '@/components/Modal'
-import Image from 'next/image'
-import PDF from '../../../publlic/work/Goddard/Phase1/Goddard_GrFloor_AcoolCabinet_A3_21.09.21.pdf'
 
 export default async function CaseStudyLayout({ children, _segments }) {
   let id = _segments.at(-2)
@@ -73,15 +71,15 @@ export default async function CaseStudyLayout({ children, _segments }) {
         </Container>
         {caseStudy?.technicalImages ? (
           <Container className="mt-24 sm:mt-32 lg:mt-40">
-          <FadeIn>
-            <h1 className="text-center text-4xl">Technical Drawings</h1>
-            <div className="grid grid-cols-3 gap-x-2">
-              {caseStudy.technicalImages.map((image) => (
-                <Modal key={`${image}`} image={image} title={`${image}`} />
-              ))}
-            </div>
-          </FadeIn>
-        </Container>
+            <FadeIn>
+              <h1 className="text-center text-4xl">Technical Drawings</h1>
+              <div className="grid grid-cols-3 gap-x-2">
+                {caseStudy.technicalImages.map((image) => (
+                  <Modal key={`${image}`} image={image} title={`${image}`} />
+                ))}
+              </div>
+            </FadeIn>
+          </Container>
         ) : (
           <></>
         )}
@@ -96,19 +94,6 @@ export default async function CaseStudyLayout({ children, _segments }) {
               </div>
             </FadeIn>
           </Container>
-        ) : (
-          <></>
-        )}
-        {caseStudy?.pdf ? (
-          <>
-            {' '}
-            <iframe
-              typeof="application/pdf"
-              data={PDF}
-              height={500}
-              width={100}
-            ></iframe>
-          </>
         ) : (
           <></>
         )}
