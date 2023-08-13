@@ -22,9 +22,14 @@ module.exports = {
         '4xl': '2.5rem',
       },
       fontFamily: {
-        sans: ['Mona Sans', ...defaultTheme.fontFamily.sans],
+        sans: ['Mulish', ...defaultTheme.fontFamily.sans],
         display: [
-          ['Mona Sans', ...defaultTheme.fontFamily.sans],
+          ['Mulish', ...defaultTheme.fontFamily.sans],
+          { fontVariationSettings: '"wdth" 125' },
+        ],
+        Mulish: ['Mulish'],
+        display: [
+          ['Mulish'],
           { fontVariationSettings: '"wdth" 125' },
         ],
       },

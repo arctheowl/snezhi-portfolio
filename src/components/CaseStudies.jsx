@@ -23,9 +23,7 @@ export default function CaseStudies({ caseStudies }) {
         title="Snezhi is the Best"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
-        <p>
-          Have a look at my previous work
-        </p>
+        <p className=" font-Mulish">Have a look at my previous work</p>
       </SectionIntro>
 
       <FadeIn>
