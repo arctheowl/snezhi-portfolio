@@ -44,7 +44,7 @@ export default async function CaseStudyLayout({ children, _segments }) {
                     </div>
                     <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0">
                       <dt className="font-semibold">Software</dt>
-                      <dd>{caseStudy.service}</dd>
+                      <dd>{caseStudy.software}</dd>
                     </div>
                   </dl>
                 </div>
