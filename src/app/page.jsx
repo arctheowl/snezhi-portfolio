@@ -12,7 +12,6 @@ export const metadata = {
 
 export default async function Home() {
   let caseStudies = await loadMDXMetadata('work')
-
   return (
     <>
       <CaseStudies caseStudies={caseStudies} />
