@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 export default function CaseStudies({ caseStudies }) {
-  const tags = ['All', 'Residential', 'Commerical', 'Museums']
+  const tags = ['All', 'Residential', 'Commercial', 'Museums']
   const [filter, setFilter] = useState('All')
 
   function onChange(tag) {
