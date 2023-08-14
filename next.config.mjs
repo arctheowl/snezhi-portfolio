@@ -13,6 +13,9 @@ import { unifiedConditional } from 'unified-conditional'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['storage.googleapis.com'],
+  },
   webpack: (config, options) =>
   {
       config.module.rules.push({

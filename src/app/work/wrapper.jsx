@@ -7,6 +7,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 import Modal from '@/components/Modal'
+import Image from 'next/image'
 
 export default async function CaseStudyLayout({ children, _segments }) {
   let id = _segments.at(-2)
@@ -54,10 +55,13 @@ export default async function CaseStudyLayout({ children, _segments }) {
               <div className="-my-px mx-auto max-w-[76rem] bg-neutral-200">
                 <GrayscaleTransitionImage
                   {...caseStudy.image}
+                  src={`${caseStudy.image}`}
                   quality={90}
                   className="w-full"
                   sizes="(min-width: 1216px) 76rem, 100vw"
                   priority
+                  width={1}
+                  height={1}
                 />
               </div>
             </div>
