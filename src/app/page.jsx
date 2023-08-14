@@ -3,9 +3,12 @@ import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 import CaseStudies from '@/components/CaseStudies'
 
 export const metadata = {
-  description:
-    'We are a development studio working at the intersection of design and technology.',
+  title: {
+    template: 'Snezhi Veskova',
+    default: 'Snezhi Veskova\'s Portfolio',
+  },
 }
+
 
 export default async function Home() {
   let caseStudies = await loadMDXMetadata('work')

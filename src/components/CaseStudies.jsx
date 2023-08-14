@@ -45,7 +45,7 @@ export default function CaseStudies({ caseStudies }) {
         <FadeIn>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-1 gap-x-2 gap-y-5 px-24 md:grid-cols-3"
+            className="mt-10 grid grid-cols-1 gap-x-2 gap-y-5 px-2 md:px-24 md:grid-cols-3"
           >
             {caseStudies.map((caseStudy) => {
               if (caseStudy.category?.includes(filter)) {
