@@ -21,7 +21,7 @@ export default async function CaseStudyLayout({ children, _segments }) {
     <>
       <article className="mt-24 sm:mt-32 lg:mt-40">
         <header>
-          <PageIntro eyebrow="Case Study" title={caseStudy.title} centered>
+          <PageIntro eyebrow=" " title={caseStudy.title} centered>
             <p>{caseStudy.description}</p>
           </PageIntro>
 
@@ -125,7 +125,6 @@ export default async function CaseStudyLayout({ children, _segments }) {
         />
       )}
 
-      <ContactSection />
     </>
   )
 }
