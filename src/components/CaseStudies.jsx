@@ -18,10 +18,10 @@ export default function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title="Snezhi is the Best"
+        title="Snezhi Veskova"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
-        <p className=" font-Mulish">Have a look at my previous work</p>
+        <p className=" font-Mulish">Portfolio of work</p>
       </SectionIntro>
 
       <FadeIn>
