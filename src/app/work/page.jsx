@@ -40,6 +40,8 @@ function CaseStudies({ caseStudies }) {
                       alt=""
                       className="h-16 w-16 flex-none"
                       unoptimized
+                      width={10}
+                      height={10}
                     />
                     <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
                       {caseStudy.client}
