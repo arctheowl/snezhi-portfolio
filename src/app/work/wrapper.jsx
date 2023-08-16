@@ -8,6 +8,8 @@ import { PageLinks } from '@/components/PageLinks'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 import Modal from '@/components/Modal'
 import Image from 'next/image'
+import { Mulish } from 'next/font/google'
+
 
 export default async function CaseStudyLayout({ children, _segments }) {
   let id = _segments.at(-2)

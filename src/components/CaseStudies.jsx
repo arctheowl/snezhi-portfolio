@@ -21,7 +21,7 @@ export default function CaseStudies({ caseStudies }) {
         title="Snezhi Veskova"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
-        <p className=" font-Mulish">Portfolio of work</p>
+        <p>Portfolio of work</p>
       </SectionIntro>
 
       <FadeIn>
