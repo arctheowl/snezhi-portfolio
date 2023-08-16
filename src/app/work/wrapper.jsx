@@ -21,7 +21,7 @@ export default async function CaseStudyLayout({ children, _segments }) {
     <>
       <article className="mt-24 sm:mt-32 lg:mt-40">
         <header>
-          <PageIntro eyebrow="Case Study" title={caseStudy.title} centered>
+          <PageIntro eyebrow=" " title={caseStudy.title} centered>
             <p>{caseStudy.description}</p>
           </PageIntro>
 
@@ -101,6 +101,20 @@ export default async function CaseStudyLayout({ children, _segments }) {
         ) : (
           <></>
         )}
+        {caseStudy?.photoImages ? (
+          <Container className="mt-24 sm:mt-32 lg:mt-40">
+            <FadeIn>
+              <h1 className="text-center text-4xl">Photos</h1>
+              <div className="grid grid-cols-3 gap-x-2">
+                {caseStudy.photoImages.map((image) => (
+                  <Modal key={`${image}`} image={image} title={`${image}`} />
+                ))}
+              </div>
+            </FadeIn>
+          </Container>
+        ) : (
+          <></>
+        )}
       </article>
 
       {moreCaseStudies.length > 0 && (
@@ -111,7 +125,6 @@ export default async function CaseStudyLayout({ children, _segments }) {
         />
       )}
 
-      <ContactSection />
     </>
   )
 }

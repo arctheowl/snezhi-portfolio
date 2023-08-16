@@ -15,7 +15,7 @@ export default async function Home() {
   return (
     <>
       <CaseStudies caseStudies={caseStudies} />
-      <ContactSection />
+      
     </>
   )
 }
