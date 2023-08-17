@@ -6,8 +6,6 @@ import { MDXComponents } from '@/components/MDXComponents'
 import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
-import Modal from '@/components/Modal'
-import Image from 'next/image'
 import ImageSlider from '@/components/ImageSlider'
 
 export default async function CaseStudyLayout({ children, _segments }) {
@@ -75,37 +73,32 @@ export default async function CaseStudyLayout({ children, _segments }) {
           </FadeIn>
         </Container>
         {caseStudy?.technicalImages ? (
-          <Container className="mt-24 sm:mt-32 lg:mt-40">
-            <FadeIn>
-              <h1 className="text-center text-4xl">Technical Drawings</h1>
-              <div className="grid grid-cols-3 gap-x-2">
-                <ImageSlider CarouselImages={caseStudy.technicalImages} />
-              </div>
-            </FadeIn>
-          </Container>
+          <FadeIn>
+            <ImageSlider
+              title="Technical Drawings"
+              CarouselImages={caseStudy.technicalImages}
+            />
+          </FadeIn>
         ) : (
           <></>
         )}
         {caseStudy?.visualImages ? (
-          <Container className="mt-24 sm:mt-32 lg:mt-40">
-            <FadeIn>
-              <h1 className="text-center text-4xl">Visuals</h1>
-
-              <ImageSlider CarouselImages={caseStudy.visualImages} />
-            </FadeIn>
-          </Container>
+          <FadeIn>
+            <ImageSlider
+              title="Visuals"
+              CarouselImages={caseStudy.visualImages}
+            />
+          </FadeIn>
         ) : (
           <></>
         )}
         {caseStudy?.photoImages ? (
-          <Container className="mt-24 sm:mt-32 lg:mt-40">
-            <FadeIn>
-              <h1 className="text-center text-4xl">Photos</h1>
-              <div className="grid grid-cols-3 gap-x-2">
-                <ImageSlider CarouselImages={caseStudy.photoImages} />
-              </div>
-            </FadeIn>
-          </Container>
+          <FadeIn>
+            <ImageSlider
+              title="Photos"
+              CarouselImages={caseStudy.photoImages}
+            />
+          </FadeIn>
         ) : (
           <></>
         )}
