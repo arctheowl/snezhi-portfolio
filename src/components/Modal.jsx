@@ -62,14 +62,13 @@ export default function ImageModal({ image, title }) {
           </Dialog>
         </Transition.Root>
       ) : (
-        <div className=" h-96 w-96 ">
+        <div className=" bg-white">
           <button onClick={() => setOpen(true)}>
             <Image
               src={image}
               alt={title}
               sizes=""
               fill
-              objectFit={'contain'}
               className="object-contain"
             />
           </button>
