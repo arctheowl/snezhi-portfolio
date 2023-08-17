@@ -8,8 +8,7 @@ import { PageLinks } from '@/components/PageLinks'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 import Modal from '@/components/Modal'
 import Image from 'next/image'
-import { Mulish } from 'next/font/google'
-
+import ImageSlider from '@/components/ImageSlider'
 
 export default async function CaseStudyLayout({ children, _segments }) {
   let id = _segments.at(-2)
@@ -80,9 +79,7 @@ export default async function CaseStudyLayout({ children, _segments }) {
             <FadeIn>
               <h1 className="text-center text-4xl">Technical Drawings</h1>
               <div className="grid grid-cols-3 gap-x-2">
-                {caseStudy.technicalImages.map((image) => (
-                  <Modal key={`${image}`} image={image} title={`${image}`} />
-                ))}
+                <ImageSlider CarouselImages={caseStudy.technicalImages} />
               </div>
             </FadeIn>
           </Container>
@@ -93,11 +90,8 @@ export default async function CaseStudyLayout({ children, _segments }) {
           <Container className="mt-24 sm:mt-32 lg:mt-40">
             <FadeIn>
               <h1 className="text-center text-4xl">Visuals</h1>
-              <div className="grid grid-cols-3 gap-x-2">
-                {caseStudy.visualImages.map((image) => (
-                  <Modal key={`${image}`} image={image} title={`${image}`} />
-                ))}
-              </div>
+
+              <ImageSlider CarouselImages={caseStudy.visualImages} />
             </FadeIn>
           </Container>
         ) : (
@@ -108,9 +102,7 @@ export default async function CaseStudyLayout({ children, _segments }) {
             <FadeIn>
               <h1 className="text-center text-4xl">Photos</h1>
               <div className="grid grid-cols-3 gap-x-2">
-                {caseStudy.photoImages.map((image) => (
-                  <Modal key={`${image}`} image={image} title={`${image}`} />
-                ))}
+                <ImageSlider CarouselImages={caseStudy.photoImages} />
               </div>
             </FadeIn>
           </Container>
@@ -126,7 +118,6 @@ export default async function CaseStudyLayout({ children, _segments }) {
           pages={moreCaseStudies}
         />
       )}
-
     </>
   )
 }
