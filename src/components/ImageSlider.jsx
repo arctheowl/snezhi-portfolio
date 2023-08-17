@@ -63,7 +63,7 @@ export default function CarouselCustomNavigation(Props) {
               <span
                 key={i}
                 className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                  activeIndex === i ? 'w-8 bg-red-900' : 'w-4 bg-blue-800'
+                  activeIndex === i ? 'w-8 bg-red-900' : 'w-3 bg-blue-800'
                 }`}
                 onClick={() => setActiveIndex(i)}
               />

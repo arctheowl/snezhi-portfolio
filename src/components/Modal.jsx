@@ -44,7 +44,7 @@ export default function ImageModal({ image, title }) {
                     >
                       Close
                     </button>
-                    <a href={image} target="_blank">
+                    <a href={image} target="_blank" className=" cursor-zoom-in">
                       <Image
                         src={image}
                         alt={title}
