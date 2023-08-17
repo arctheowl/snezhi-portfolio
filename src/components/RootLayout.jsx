@@ -128,7 +128,7 @@ function Navigation() {
     <nav className={`mt-px font-display text-5xl font-medium tracking-tight text-white ${mulish.className}`}>
       <NavigationRow>
         <NavigationItem href="/about">About Me</NavigationItem>
-        <NavigationItem href="/work">My Work</NavigationItem>
+        <NavigationItem href="/">My Work</NavigationItem>
       </NavigationRow>
     </nav>
   )

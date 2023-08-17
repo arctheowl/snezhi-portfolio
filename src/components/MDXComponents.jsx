@@ -80,7 +80,7 @@ export const MDXComponents = {
     return (
       <div
         className={clsx(
-          '[&>*]:mx-auto [&>*]:max-w-3xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0',
+          '[&>*]:mx-auto [&>*]:max-w-6xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0',
           className,
           mulish.className
         )}

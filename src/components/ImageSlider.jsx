@@ -9,7 +9,6 @@ export default function CarouselCustomNavigation(Props) {
       <h1 className="text-center text-4xl pt-24">{Props.title}</h1>
       <div className="mx-auto flex h-[40rem] w-1/2 ">
         <Carousel
-          loop={true}
           autoplay={true}
           style={{
             base: {
