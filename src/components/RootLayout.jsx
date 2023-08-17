@@ -18,10 +18,10 @@ import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
-import { Offices } from '@/components/Offices'
-import { SocialMedia } from '@/components/SocialMedia'
+import { Mulish } from 'next/font/google';
 
 const RootLayoutContext = createContext({})
+const mulish = Mulish({ subsets: ['latin'] });
 
 function XIcon(props) {
   return (
@@ -125,7 +125,7 @@ function NavigationItem({ href, children }) {
 
 function Navigation() {
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    <nav className={`mt-px font-display text-5xl font-medium tracking-tight text-white ${mulish.className}`}>
       <NavigationRow>
         <NavigationItem href="/about">About Me</NavigationItem>
         <NavigationItem href="/work">My Work</NavigationItem>
