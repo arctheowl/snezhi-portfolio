@@ -18,10 +18,10 @@ import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
-import { Offices } from '@/components/Offices'
-import { SocialMedia } from '@/components/SocialMedia'
+import { Mulish } from 'next/font/google';
 
 const RootLayoutContext = createContext({})
+const mulish = Mulish({ subsets: ['latin'] });
 
 function XIcon(props) {
   return (
@@ -125,14 +125,10 @@ function NavigationItem({ href, children }) {
 
 function Navigation() {
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    <nav className={`mt-px font-display text-5xl font-medium tracking-tight text-white ${mulish.className}`}>
       <NavigationRow>
         <NavigationItem href="/about">About Me</NavigationItem>
         <NavigationItem href="/work">My Work</NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href="/process">My Process</NavigationItem>
-        {/* <NavigationItem href="/blog">Blog</NavigationItem> */}
       </NavigationRow>
     </nav>
   )
@@ -207,21 +203,6 @@ function RootLayoutInner({ children }) {
               />
             </div>
             <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
-              <Container>
-                <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <button>
-                      <h2 className="font-display text-base font-semibold text-white">
-                        Download My Portfolio
-                      </h2>
-                    </button>
-
-                    {/* <SocialMedia className="mt-6" invert /> */}
-                  </div>
-                </div>
-              </Container>
-            </div>
           </motion.div>
         </motion.div>
       </header>

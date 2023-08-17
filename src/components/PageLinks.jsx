@@ -6,7 +6,7 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GridPattern } from '@/components/GridPattern'
 import { SectionIntro } from '@/components/SectionIntro'
-import { formatDate } from '@/lib/formatDate'
+import Image from 'next/image'
 
 function ArrowIcon(props) {
   return (
@@ -25,27 +25,28 @@ function PageLink({ page }) {
     <article key={page.href}>
       <Border
         position="left"
-        className="relative flex flex-col items-start pl-8"
+        className="group relative h-64 pl-8 md:h-80"
       >
-        <h3 className="mt-6 text-base font-semibold text-neutral-950">
-          {page.title}
-        </h3>
-        <time
-          dateTime={page.date}
-          className="order-first text-sm text-neutral-600"
+        <div
+          className={`-z-10 aspect-auto w-full opacity-50 group-hover:opacity-100`}
         >
-          {formatDate(page.date)}
-        </time>
-        <p className="mt-2.5 text-base text-neutral-600">{page.description}</p>
-        <Link
-          href={page.href}
-          className="mt-6 flex gap-x-3 text-base font-semibold text-neutral-950 transition hover:text-neutral-700"
-          aria-label={`Read more: ${page.title}`}
-        >
-          Read more
-          <ArrowIcon className="w-6 flex-none fill-current" />
-          <span className="absolute inset-0" />
-        </Link>
+          <Image src={page.logo} fill alt={page.title} />
+        </div>
+        <div className='flex justify-between px-2'>
+          <h3 className="left-60 top-2 mt-6 text-lg font-bold text-neutral-950 z-10 ">
+            {page.title}
+          </h3>
+
+          <Link
+            href={page.href}
+            className="mt-6 flex gap-x-3 text-base font-semibold text-neutral-950 transition hover:text-neutral-700 z-10"
+            aria-label={`Read more: ${page.title}`}
+          >
+            Read more
+            <ArrowIcon className="w-6 flex-none fill-current" />
+            <span className="absolute inset-0" />
+          </Link>
+        </div>
       </Border>
     </article>
   )

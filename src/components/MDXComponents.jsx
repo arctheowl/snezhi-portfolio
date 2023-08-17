@@ -5,10 +5,18 @@ import { Border } from '@/components/Border'
 import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import { StatList, StatListItem } from '@/components/StatList'
 import { TagList, TagListItem } from '@/components/TagList'
+import { Mulish } from 'next/font/google'
+
+const mulish = Mulish({ subsets: ['latin'] })
 
 export const MDXComponents = {
   Blockquote({ className, ...props }) {
-    return <Blockquote className={clsx('my-32', className)} {...props} />
+    return (
+      <Blockquote
+        className={clsx('my-32', className, mulish.className)}
+        {...props}
+      />
+    )
   },
   img: function Img({ className, ...props }) {
     return (
@@ -53,7 +61,7 @@ export const MDXComponents = {
   TopTip({ className, children }) {
     return (
       <Border position="left" className={clsx('my-10 pl-8', className)}>
-        <p className="font-display text-sm font-bold uppercase tracking-widest text-neutral-950">
+        <p className="text-sm font-bold uppercase tracking-widest text-neutral-950">
           Top tip
         </p>
         <div className="mt-4">{children}</div>
@@ -61,14 +69,20 @@ export const MDXComponents = {
     )
   },
   Typography({ className, ...props }) {
-    return <div className={clsx('typography', className)} {...props} />
+    return (
+      <div
+        className={clsx(mulish.className, 'typography', className)}
+        {...props}
+      />
+    )
   },
   wrapper({ className, ...props }) {
     return (
       <div
         className={clsx(
           '[&>*]:mx-auto [&>*]:max-w-3xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0',
-          className
+          className,
+          mulish.className
         )}
         {...props}
       />
