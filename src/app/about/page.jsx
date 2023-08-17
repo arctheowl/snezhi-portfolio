@@ -27,7 +27,7 @@ export default async function About() {
           />
         </div>
         <div className="text-lg p-2 ">
-          <p>Hi I'm Snezhi</p>
+          <p>{`Hi I\'m Snezhi`}</p>
           <div className="mt-10 max-w-3xl space-y-6 text-base">
             <p>
               Studio was started by three friends who noticed that developer
