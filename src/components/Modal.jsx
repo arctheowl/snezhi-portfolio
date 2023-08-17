@@ -45,14 +45,15 @@ export default function ImageModal({ image, title }) {
                       Close
                     </button>
                     <a href={image} target="_blank" className="cursor-zoom-in">
-                      <Image
-                        src={image}
-                        alt={title}
-                        className="max-h-[60rem]"
-                        sizes="(max-width: 768px)"
-                        width={5000}
-                        height={5000}
-                      />
+                      <div className="h-96 w-96">
+                        <Image
+                          src={image}
+                          alt={title}
+                          fill
+                          objectFit={'contain'}
+                          className="object-contain"
+                        />
+                      </div>
                     </a>
                   </Dialog.Panel>
                 </Transition.Child>
@@ -61,9 +62,16 @@ export default function ImageModal({ image, title }) {
           </Dialog>
         </Transition.Root>
       ) : (
-        <div className=" max-h-fit max-w-6xl">
+        <div className=" h-96 w-96 ">
           <button onClick={() => setOpen(true)}>
-            <Image src={image} alt={title} sizes="" fill />
+            <Image
+              src={image}
+              alt={title}
+              sizes=""
+              fill
+              objectFit={'contain'}
+              className="object-contain"
+            />
           </button>
         </div>
       )}
