@@ -36,10 +36,10 @@ export default function ImageModal({ image, title }) {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="max-h-4xl relative mx-24 max-w-6xl transform items-center overflow-hidden overflow-y-clip rounded-lg bg-white text-left shadow-xl transition-all sm:my-2 sm:p-2">
+                  <Dialog.Panel className="h-screen mx-24 w-full transform items-center overflow-hidden overflow-y-clip rounded-lg bg-white text-left shadow-xl transition-all sm:my-2 sm:p-2">
                     <button
                       type="button"
-                      className=" absolute right-2 top-2 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      className=" z-10 absolute right-2 top-2 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                       onClick={() => setOpen(false)}
                     >
                       Close
