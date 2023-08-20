@@ -4,7 +4,7 @@ import CaseStudies from '@/components/CaseStudies'
 
 export const metadata = {
   title: {
-    template: 'Snezhi Veskova',
+    template: 'Snezhana Veskova',
     default: "Snezhi Veskova\'s Portfolio",
   },
 }
@@ -14,7 +14,6 @@ export default async function Home() {
   return (
     <>
       <CaseStudies caseStudies={caseStudies} />
-      <ContactSection />
     </>
   )
 }

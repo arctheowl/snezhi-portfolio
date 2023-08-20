@@ -15,7 +15,7 @@ export default function CaseStudies({ caseStudies }) {
   }
   return (
     <>
-      <SectionIntro title="Snezhi Veskova" className="mt-24 sm:mt-32 lg:mt-40">
+      <SectionIntro title="Snezhana Veskova" className="mt-24 sm:mt-32 lg:mt-40 mb-24">
         <p>Portfolio of work</p>
       </SectionIntro>
 

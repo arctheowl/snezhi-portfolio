@@ -10,13 +10,13 @@ export function Logomark({ invert = false, filled = false, ...props }) {
         clipPath={`url(#${id}-clip)`}
         className={clsx(
           'h-8 transition-all duration-300',
-          invert ? 'fill-white' : 'fill-neutral-950',
+          invert ? 'fill-white' : 'fill-slate-700',
           filled ? 'w-8' : 'w-0 group-hover/logo:w-8'
         )}
       />
       <use
         href={`#${id}-path`}
-        className={invert ? 'stroke-white' : 'stroke-neutral-950'}
+        className={invert ? 'stroke-white' : 'stroke-slate-700'}
         fill="none"
         strokeWidth="1.5"
       />
@@ -55,7 +55,7 @@ export function Logo({
       <svg
         height="30"
         width="200"
-        className={invert ? 'fill-white' : 'fill-neutral-950'}
+        className={invert ? 'fill-white' : 'fill-slate-700'}
       >
         <text x="40" y="20" className="">
           Snezhi
