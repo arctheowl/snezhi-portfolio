@@ -32,9 +32,7 @@ export default async function About(centered = false) {
         </div>
         <div className="max-w-none space-y-6 text-left">
           <div className="block font-semibold text-xl text-neutral-900">
-            <p>
-              Hi, I'm Snezhi
-            </p>
+            <p>Hi, I&apos;m Snezhi</p>
           </div>
           <div className="block font-semibold text-lg text-neutral-900">
             <p>
