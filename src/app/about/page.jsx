@@ -6,7 +6,6 @@ import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 import { Container } from '@/components/Container'
 import clsx from 'clsx'
 
-
 export const metadata = {
   title: 'About Me',
   description:

@@ -26,7 +26,7 @@ export default function ImageModal({ image, title }) {
             </Transition.Child>
 
             <div className="fixed inset-0 z-10 overflow-y-auto">
-              <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+              <div className="flex min-h-screen items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <Transition.Child
                   as={Fragment}
                   enter="ease-out duration-300"
@@ -36,23 +36,24 @@ export default function ImageModal({ image, title }) {
                   leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
-                  <Dialog.Panel className="max-h-4xl relative mx-24 max-w-6xl transform items-center rounded-lg bg-white text-left shadow-xl transition-all sm:my-2 sm:p-2">
+                  <Dialog.Panel className="h-screen mx-24 w-full transform items-center overflow-hidden overflow-y-clip rounded-lg bg-white text-left shadow-xl transition-all sm:my-2 sm:p-2">
                     <button
                       type="button"
-                      className=" absolute right-2 top-2 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      className=" z-10 absolute right-2 top-2 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                       onClick={() => setOpen(false)}
                     >
                       Close
                     </button>
-                    <a href={image} target="_blank" className=" cursor-zoom-in">
-                      <Image
-                        src={image}
-                        alt={title}
-                        className=""
-                        sizes="(max-width: 768px) 100vw"
-                        width={5000}
-                        height={5000}
-                      />
+                    <a href={image} target="_blank" className="cursor-zoom-in">
+                      <div className="h-96 w-96">
+                        <Image
+                          src={image}
+                          alt={title}
+                          fill
+                          objectFit={'contain'}
+                          className="object-contain"
+                        />
+                      </div>
                     </a>
                   </Dialog.Panel>
                 </Transition.Child>
@@ -61,14 +62,14 @@ export default function ImageModal({ image, title }) {
           </Dialog>
         </Transition.Root>
       ) : (
-        <div className="h-96 w-96">
+        <div className=" bg-white">
           <button onClick={() => setOpen(true)}>
             <Image
               src={image}
               alt={title}
-              sizes="(max-width: 768px) 100vw"
-              width={500}
-              height={500}
+              sizes=""
+              fill
+              className="object-contain"
             />
           </button>
         </div>

@@ -14,7 +14,7 @@ const mulish = Mulish({ subsets: ['latin'] });
 
 export default function Layout({ children }) {
   return (
-    <html lang="en" className={`h-full bg-neutral-950 text-base antialiased ${mulish.className}`}>
+    <html lang="en" className={`h-full bg-[#f1f1f1] text-base antialiased ${mulish.className}`}>
       <body className={`flex min-h-full flex-col ${mulish.className}`}>
         <RootLayout>{children}</RootLayout>
       </body>
