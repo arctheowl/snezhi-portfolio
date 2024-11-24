@@ -16,10 +16,11 @@ export async function loadMDXMetadata(directory) {
           id,
           href: `/${directory}/${id}`,
           ...(await import(`../app/${directory}/${filename}`))[
-            exportNames[directory]
+          exportNames[directory]
           ],
         }
       })
     )
-  ).sort((a, b) => b.date.localeCompare(a.date))
+  ).sort(function (a, b) { return a.sortOrder - b.sortOrder })
+  //sort((a, b) => b.date.localeCompare(a.date))
 }
