@@ -15,8 +15,8 @@ function ContactDetails() {
 
         <dl className="grid grid-cols-1 grid-rows-2 gap-8 text-sm">
           {[
-            ['Email', 'mailto:snezhana.nikolaeva@gmail.com', 'snezhana.nikolaeva@gmail.com'],
-            ['LinkedIn', 'https://www.linkedin.com/in/snezhana-veskova/', 'Snezhana Veskova']           
+            ['Email', 'mailto:s.n.veskova@gmail.com', 's.n.veskova@gmail.com'],
+            ['LinkedIn', 'https://www.linkedin.com/in/snezhana-veskova/', 'Snezhana Veskova']
           ].map(([label, link, disp]) => (
             <div key={link}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
