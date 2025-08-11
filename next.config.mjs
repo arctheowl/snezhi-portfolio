@@ -15,15 +15,15 @@ import { unifiedConditional } from 'unified-conditional'
 const nextConfig = {
   images: {
     domains: ['storage.googleapis.com'],
+    unoptimized: module.exports = nextConfig
   },
-  webpack: (config, options) =>
-  {
-      config.module.rules.push({
-          test: /\.pdf$/i,
-          type: 'asset/source'
-      })
+  webpack: (config, options) => {
+    config.module.rules.push({
+      test: /\.pdf$/i,
+      type: 'asset/source'
+    })
 
-      return config
+    return config
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
 }
@@ -82,7 +82,7 @@ export default async function config() {
         remarkUnwrapImages,
         [
           unifiedConditional,
-         
+
           [
             new RegExp(`^${escapeStringRegexp(path.resolve('src/app/work'))}`),
             [[remarkMDXLayout, '@/app/work/wrapper']],
@@ -94,3 +94,4 @@ export default async function config() {
 
   return withMDX(nextConfig)
 }
+
