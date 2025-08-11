@@ -15,7 +15,7 @@ import { unifiedConditional } from 'unified-conditional'
 const nextConfig = {
   images: {
     domains: ['storage.googleapis.com'],
-    unoptimized: module.exports = nextConfig
+    unoptimized: true
   },
   webpack: (config, options) => {
     config.module.rules.push({
